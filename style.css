@@ -9,11 +9,12 @@ h1 {
 /* Contenedor de los filtros */
 .filtros {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 20px;
-    margin-top: 130px;
+    margin-top: 50px;
     width: 100%; /* Asegura que ocupa todo el ancho */
 }
 
@@ -24,6 +25,8 @@ input, select, button {
     border-radius: 5px;
     border: 1px solid #ccc;
     text-align: center;
+    width: 100%;
+    max-width: 300px;
 }
 
 button {
@@ -40,24 +43,30 @@ button:hover {
 
 /* Ajuste del contenedor del gráfico */
 #graficoBarras {
-    max-width: 1800px !important;
-    height: 650px !important;
-    margin: 1%;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
     background: white;
-    padding: 0px;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Asegurar que el canvas no se estire demasiado */
 canvas {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
 }
 
-/* Mejora visual en las etiquetas del gráfico */
-.chart-labels {
-    font-size: 500px !important;
-    font-weight: bold;
+/* Media queries para mejorar en teléfonos */
+@media (max-width: 600px) {
+    .filtros {
+        flex-direction: column;
+        gap: 5px;
+    }
+    h1 {
+        font-size: 22px;
+    }
 }
