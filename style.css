@@ -1,0 +1,63 @@
+/* Estilizar el título */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 130px;
+    width: 100%; /* Asegura que ocupa todo el ancho */
+}
+
+/* Ajuste de los inputs y botones */
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Ajuste del contenedor del gráfico */
+#graficoBarras {
+    max-width: 1800px !important;
+    height: 650px !important;
+    margin: 1%;
+    background: white;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Asegurar que el canvas no se estire demasiado */
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mejora visual en las etiquetas del gráfico */
+.chart-labels {
+    font-size: 500px !important;
+    font-weight: bold;
+}
